@@ -1,0 +1,14 @@
+{
+  "model": "Astrocardia synthetic health-status demo",
+  "library": "TensorFlow.js 4.22.0",
+  "sourceRecords": 100,
+  "augmentedSyntheticRows": 3000,
+  "classes": [
+    "Healthy",
+    "Attention",
+    "Critical"
+  ],
+  "validationAccuracy": 0.7067,
+  "epochs": 45,
+  "trainingNote": "Synthetic demonstration labels only. Not clinically validated. Not for diagnosis, medication, or treatment decisions."
+}
