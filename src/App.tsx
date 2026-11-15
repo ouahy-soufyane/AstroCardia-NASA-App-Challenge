@@ -78,6 +78,11 @@ export default function App() {
     setRole(selectedRole);
     setPage('Dashboard');
   }
+  function useDemoAccount(demoRole: Role) {
+    setSelectedRole(demoRole);
+    setEmail(demoRole === 'Astronaut' ? 'astronaut@astrocardia.demo' : 'doctor@astrocardia.demo');
+    setPassword(demoRole === 'Astronaut' ? 'Astro2026!' : 'Doctor2026!');
+  }
   function logOut() {
     localStorage.removeItem('astrocardia-role');
     setRole(null);
@@ -161,7 +166,12 @@ export default function App() {
         <label className="login-label">Password<input type="password" autoComplete="current-password" placeholder="Enter your password" value={password} onChange={e => setPassword(e.target.value)} required/></label>
         <button className="primary-btn login-submit" type="submit">Sign in to Astrocardia <span>→</span></button>
       </form>
-      <div className="login-demo"><ShieldCheck/> Demo sign-in only. Any valid email and password work.</div>
+      <div className="demo-accounts">
+        <div className="demo-accounts-heading"><span>DEMO ACCOUNTS</span><small>For presentation use</small></div>
+        <div className="demo-account"><div><b>Astronaut</b><code>astronaut@astrocardia.demo</code><code>Astro2026!</code></div><button type="button" onClick={() => useDemoAccount('Astronaut')}>Use</button></div>
+        <div className="demo-account"><div><b>Doctor</b><code>doctor@astrocardia.demo</code><code>Doctor2026!</code></div><button type="button" onClick={() => useDemoAccount('Doctor')}>Use</button></div>
+      </div>
+      <div className="login-demo"><ShieldCheck/> Demo only. Sample credentials fill the form; any non-empty password works.</div>
     </section>
     <p className="login-footer">Astrocardia · Health support for every mission</p>
   </div>;
