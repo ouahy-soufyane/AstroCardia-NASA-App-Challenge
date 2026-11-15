@@ -290,5 +290,15 @@ body::before {
 .login-submit span { font-size: 17px; margin-left: 3px; }
 .login-demo { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 16px; color: #859bb6; font-size: 9px; text-align: center; }
 .login-demo svg { width: 13px; height: 13px; color: #5ed9f5; }
+.demo-accounts { margin-top: 18px; padding: 13px; border: 1px solid rgba(73, 190, 255, .2); border-radius: 11px; background: rgba(4, 13, 30, .56); }
+.demo-accounts-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; color: #62dafa; font-size: 9px; font-weight: 800; letter-spacing: 1px; }
+.demo-accounts-heading small { color: #8197b0; font-size: 9px; font-weight: 500; letter-spacing: 0; }
+.demo-account { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 9px 0; }
+.demo-account + .demo-account { border-top: 1px solid rgba(109, 157, 203, .15); }
+.demo-account > div { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 12px; min-width: 0; }
+.demo-account b { grid-column: 1 / -1; color: #dcedff; font-size: 10px; }
+.demo-account code { color: #9db6d1; font: 9px 'DM Sans', sans-serif; overflow-wrap: anywhere; }
+.demo-account button { flex: 0 0 auto; padding: 5px 10px; border: 1px solid rgba(73, 190, 255, .35); border-radius: 7px; color: #72dfff; background: rgba(0, 126, 255, .1); font-size: 9px; font-weight: 700; cursor: pointer; }
+.demo-account button:hover { background: rgba(0, 126, 255, .22); }
 .login-footer { margin: 18px 0 0; color: #7188a7; font-size: 9px; text-align: center; }
 @media (max-width: 480px) { .login-card { padding: 23px 19px; } .login-brand { margin-bottom: 17px; } }
